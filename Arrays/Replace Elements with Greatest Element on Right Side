@@ -1,0 +1,8 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        # Go backwards from right to left. Going from left to right is O(n^2) and right to left is O(n) and also much easier
+        mx = -1
+        n = len(arr)
+        for i in range(n-1, -1, -1):
+            arr[i], mx = mx, max(mx, arr[i])
+        return arr
