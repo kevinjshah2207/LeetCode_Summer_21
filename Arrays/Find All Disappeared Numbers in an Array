@@ -9,4 +9,6 @@ class Solution:
             if n > 0:
                 res.append(i+1)
         return res
-   # You are checking the index of each number present in the array and if it is not negative, then make it negative. This will leave only the indexes positive that are not present in the array. So then you can jsut print the index of the elements that are positive.
+   # You are checking the index of each number present in the array and if it is not negative, then make it negative. 
+   # This will leave only the indexes positive that are not present in the array. 
+   #So then you can jsut print the index of the elements that are positive.
