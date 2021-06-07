@@ -1,0 +1,18 @@
+# Given two binary strings a and b, return their sum as a binary string.
+
+class Solution:
+    def addBinary(self, x: str, y: str) -> str:
+        max_len = max (len(x), len(y))
+        x = x.zfill(max_len)
+        y = y.zfill(max_len)
+        carry = 0
+        result = ''
+        for i in range(max_len-1, -1, -1):
+            r = carry
+            r += 1 if x[i] == '1' else 0
+            r += 1 if y[i] == '1' else 0
+            result = ('1' if r % 2 == 1 else '0') + result
+            carry = 1 if r >= 2 else 0
+        if carry != 0:
+            result = '1' + result
+        return result
