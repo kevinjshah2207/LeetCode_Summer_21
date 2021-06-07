@@ -1,0 +1,32 @@
+# Given an m x n matrix, return all elements of the matrix in spiral order.
+
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        res = []
+        n, m = len(matrix), len(matrix[0])
+        if(not matrix or len(matrix) == 0):
+            return res
+        left, right = 0, m-1
+        up, down = 0, n-1
+        while (len(res) < n*m):
+            j = left
+            while (j <= right and len(res) < n*m):
+                res.append(matrix[up][j])
+                j += 1
+            i = up + 1
+            while (i <= down-1 and len(res) < n*m):
+                res.append(matrix[i][right])
+                i += 1
+            j = right
+            while (j >= left and len(res) < n*m):
+                res.append(matrix[down][j])
+                j -= 1
+            i = down - 1
+            while (i > up and len(res) < n*m):
+                res.append(matrix[i][left])
+                i -= 1
+            up += 1
+            left += 1
+            down -= 1
+            right -= 1
+        return res
