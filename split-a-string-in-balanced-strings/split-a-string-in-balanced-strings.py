@@ -7,7 +7,7 @@ class Solution:
                 l += 1
             else:
                 r += 1
-            if l == r and l > 0:
+            if l == r:
                 count += 1
                 l, r = 0, 0
         return count
