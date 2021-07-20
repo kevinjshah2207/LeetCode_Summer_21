@@ -11,7 +11,6 @@ class Solution:
                 return False
             else:
                 d[i] -= 1
-        for i in d.values():
-            if i != 0:
-                return False
-        return True
+                if d[i] < 0:
+                    return False
+        return not sum(d.values())
