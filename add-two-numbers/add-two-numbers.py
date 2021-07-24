@@ -3,6 +3,10 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+
+# Create a new empty ListNode to get the answer. Get the values of the nodes in the linked list. Add the 2 values and calculate the carry. Create a new
+# ListNode with previous as the new empty ListNode with value as the sum of the 2 values taken from the given lists. In the end, return root.
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0
