@@ -1,3 +1,5 @@
+# Initialize a large value as min_price and 0 as max_profit. Loop through the list given. If the value is lesser than min_price, replace it. If difference
+# prices[i] and min_price is greater than max_profit, replace the value. In the end, return max_profit
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         profit = 0
