@@ -6,6 +6,7 @@ class Solution:
             if flowerbed[i-1] == flowerbed[i] == flowerbed[i+1] == 0:
                 flowerbed[i] = 1
                 count += 1
+                i += 1
                 if count == n:
                     break
         return count >= n
