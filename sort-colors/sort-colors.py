@@ -1,3 +1,13 @@
+# This problem uses a 3 pointer approach also known as the Dutch Partitioning problem.
+# You place one pointer at the end of the list and the other two pointer at the beginning
+# of the list. As the colors are represented by 0(red), 1(white), 2(blue); We place the 
+# pointer representing blue in the end. We first check if white(1) pointer points at 0,
+# then we swap red and white pointer values and increment them both. If the white pointer
+# points to 1 then we just increment the white pointer by 1. If the white pointer, points
+# to 2, then we swap white and blue pointer values and then decrement blue pointer by 1.
+# We continue to do this until white <= blue.
+
+
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """
