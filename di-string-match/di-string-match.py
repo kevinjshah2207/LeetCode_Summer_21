@@ -1,15 +1,10 @@
+# Initialize 2 pointers l = 0 and r = len(s). As the output array is a list of [0,r], we just
+# place l if we encounter I and r if we encounter D. We also increment l when I and decrement
+# r when D occurs. In the end we just append the last r to complete the array with the 
+# missing number in the range [0,len(s)]
+
 class Solution:
     def diStringMatch(self, s: str) -> List[int]:
-        # left = right = 0
-        # res = [0]
-        # for i in S:
-        #     if i == "I":
-        #         right += 1
-        #         res.append(right)
-        #     else:
-        #         left -= 1
-        #         res.append(left)
-        # return [i - left for i in res]
         l, r = 0, len(s)
         out = []
         for i in range(len(s)):
