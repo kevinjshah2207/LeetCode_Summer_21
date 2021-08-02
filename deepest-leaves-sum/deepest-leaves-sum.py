@@ -1,3 +1,7 @@
+# Level Order Traversal of a Binary Tree is used to solve this problem. The loop is run until
+# we encounter the max depth of the tree. The loop will run one extra time after finding the 
+# max depth but will store all the nodes present at the previous level.
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
